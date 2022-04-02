@@ -9,22 +9,21 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void Lastname()
+        public static void EmailValidate()
         {
-            Console.WriteLine("Please Enter your Last name");
+            Console.WriteLine("Please Enter your Email");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{2,}$");
+                Regex r = new Regex(@"^[a-z]{3}(\.[a-z]{3})[@]bl.(|co|in)$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your last name is " + true);
+                    Console.WriteLine("your Email is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Last name is " + false);
-                    Console.WriteLine("last Name Should be Contain Only Three Character");
+                    Console.WriteLine("Your Email is " + false);
                 }
             }
         }
