@@ -9,14 +9,14 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void PasswordNumeric()
+        public static void PasswordWithSpecialChar()
         {
-            Console.WriteLine("Please Enter your password with numeric");
+            Console.WriteLine("Enter your password with one Upper,one numberic,one special char");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][0-9][a-z]{6}$");
+                Regex r = new Regex(@"^[A-Z][0-9](|_|.|-|~)[a-z]{5}$");
                 if (r.IsMatch(input))
                 {
                     Console.WriteLine("your password is " + true);
