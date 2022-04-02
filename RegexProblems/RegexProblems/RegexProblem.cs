@@ -9,9 +9,9 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void Firstname()
+        public static void Lastname()
         {
-            Console.WriteLine("Please Enter your First name");
+            Console.WriteLine("Please Enter your Last name");
 
             while (true)
             {
@@ -19,12 +19,12 @@ namespace RegexProblems
                 Regex r = new Regex("^[A-Z][a-z]{2,}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your First name is " + true);
+                    Console.WriteLine("your last name is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your First name is " + false);
-                    Console.WriteLine("First Name Should be Contain Only Four Character");
+                    Console.WriteLine("Your Last name is " + false);
+                    Console.WriteLine("last Name Should be Contain Only Three Character");
                 }
             }
         }
