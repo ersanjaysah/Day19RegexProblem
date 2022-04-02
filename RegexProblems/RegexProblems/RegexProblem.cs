@@ -9,14 +9,14 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void PasswordWitUpperCase()
+        public static void PasswordNumeric()
         {
-            Console.WriteLine("Please Enter your password");
+            Console.WriteLine("Please Enter your password with numeric");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^[A-Z][a-z]{7}$");
+                Regex r = new Regex("^[A-Z][0-9][a-z]{6}$");
                 if (r.IsMatch(input))
                 {
                     Console.WriteLine("your password is " + true);
