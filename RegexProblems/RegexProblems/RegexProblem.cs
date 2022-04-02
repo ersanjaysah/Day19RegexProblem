@@ -9,21 +9,21 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void EmailValidate()
+        public static void MobileNumber()
         {
-            Console.WriteLine("Please Enter your Email");
+            Console.WriteLine("Please Enter your Mobile Number");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex(@"^[a-z]{3}(\.[a-z]{3})[@]bl.(|co|in)$");
+                Regex r = new Regex("^91 [9876][0-9]{9}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your Email is " + true);
+                    Console.WriteLine("your mobile number is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Email is " + false);
+                    Console.WriteLine("Your Mobile number is " + false);
                 }
             }
         }
