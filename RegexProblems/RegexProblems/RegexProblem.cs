@@ -9,21 +9,21 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void PasswordWithSpecialChar()
+        public static void EmailValidation()
         {
-            Console.WriteLine("Enter your password with one Upper,one numberic,one special char");
+            Console.WriteLine("Enter your Email Address");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex(@"^[A-Z][0-9](|_|.|-|~)[a-z]{5}$");
+                Regex r = new Regex("^[A-Za-z0-9.+-]{1,}[a-zA-Z0-9]@[a-z0-9]{1,}.(co|org|com|in|us|net|au|com.com|com.au)$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your password is " + true);
+                    Console.WriteLine("your Email is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your password is " + false);
+                    Console.WriteLine("Your email is " + false);
                 }
             }
         }
