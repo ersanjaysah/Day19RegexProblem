@@ -7,7 +7,7 @@ namespace RegexProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to regex problems");
-            RegexProblem.MobileNumber();
+            RegexProblem.Password();
         }
     }
 }

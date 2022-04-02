@@ -9,21 +9,21 @@ namespace RegexProblems
 {
     public class RegexProblem
     {
-        public static void MobileNumber()
+        public static void Password()
         {
-            Console.WriteLine("Please Enter your Mobile Number");
+            Console.WriteLine("Please Enter your password");
 
             while (true)
             {
                 string input = Console.ReadLine();
-                Regex r = new Regex("^91 [9876][0-9]{9}$");
+                Regex r = new Regex("^[A-Za-z0-9]{8}$");
                 if (r.IsMatch(input))
                 {
-                    Console.WriteLine("your mobile number is " + true);
+                    Console.WriteLine("your password is " + true);
                 }
                 else
                 {
-                    Console.WriteLine("Your Mobile number is " + false);
+                    Console.WriteLine("Your password is " + false);
                 }
             }
         }
